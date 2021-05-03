@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NewTest</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div>
+      <% if user_signed_in? %>
+              <p>
+                <%= link_to current_user.email, edit_user_registration_path, class: "button is-info" %>
+              </p>
+              <p>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-info" %>
+              </p>
+            <% else %>
+            <p>
+              <%= link_to 'Sign In', new_user_session_path, class: "button is-info" %>
+            </p>
+						<p>
+              <%= link_to 'Sign Up', new_user_registration_path, class: "button is-info" %>
+            </p>
+            <% end %>
+    </div>
+    <%= yield %>
+  </body>
+</html>
