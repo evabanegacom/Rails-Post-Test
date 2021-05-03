@@ -19,7 +19,7 @@ This project is a technical test!
 <br />
 <p align="center">
   <a href="https://github.com/evabanegacom/Rails-Post-Test">
-    <img src="images/react.png" alt="Logo" width="80" height="80">
+    <img src="images/download.jpeg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Rails-job-test</h3>
